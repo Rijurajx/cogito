@@ -45,13 +45,14 @@ const Page = () => {
     <div className="w-full h-screen flex items-center justify-center bg-black">
       {!showButtons ? (
         <video
-          ref={videoRef}
-          src="/assets/aivid.mp4"
-          className="w-full h-full object-cover"
-          autoPlay
-          playsInline
-          controls
-        />
+        ref={videoRef}
+        src="/assets/aivid.mp4"
+        className="max-w-full max-h-full w-auto h-auto object-contain"
+        autoPlay
+        playsInline
+        controls
+      />
+      
       ) : (
         <div className="flex flex-col items-center justify-center text-center px-6">
         {/* Centered Text with Padding */}
