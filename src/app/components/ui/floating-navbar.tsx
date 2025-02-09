@@ -3,8 +3,6 @@ import React, { useState, useEffect } from "react";
 import {
   motion,
   AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -20,7 +18,6 @@ export const FloatingNav = ({
   }[];
   className?: string;
 }) => {
-  const { scrollY } = useScroll();
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {

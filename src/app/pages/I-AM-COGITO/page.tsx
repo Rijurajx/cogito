@@ -16,12 +16,12 @@ const Page = () => {
     if (video) {
       const playVideo = async () => {
         try {
-          await video.play();
-          video.muted = false; // Unmute after autoplay
-        } catch (error) {
-          console.error("Autoplay blocked: User interaction needed.");
-          video.muted = true;
-        }
+            await video.play();
+            video.muted = false;
+          } catch (_) { // Using underscore avoids ESLint error
+            console.error("Autoplay blocked: User interaction needed.");
+            video.muted = true;
+          }
       };
 
       playVideo();
